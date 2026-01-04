@@ -118,6 +118,7 @@ export default class Slide {
   addResizeEvent() {
     window.addEventListener("resize", this.onResize);
   }
+
   bindEvents() {
     this.onStart = this.onStart.bind(this);
     this.onMove = this.onMove.bind(this);
@@ -127,6 +128,7 @@ export default class Slide {
     this.changeSlideOnEnd = this.changeSlideOnEnd.bind(this);
     this.onResize = debounce(this.onResize.bind(this), 200);
   }
+
   init() {
     this.bindEvents();
     this.transition(true);
